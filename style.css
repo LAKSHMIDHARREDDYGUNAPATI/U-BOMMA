@@ -1,0 +1,220 @@
+:root {
+    --bg-black: #000000;
+    --surface-dark: #0a0a0a;
+    --accent-green: #4ade80;
+    --accent-green-dark: #166534;
+    --text-main: #ffffff;
+    --text-dim: rgba(255, 255, 255, 0.6);
+    --header-height: 64px;
+    --glass-effect: blur(15px) saturate(180%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-black);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- Header & Search Logic --- */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: var(--glass-effect);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(180deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    padding: 2px 4px;
+    transition: all 0.3s ease;
+    width: 40px;
+    overflow: hidden;
+}
+
+.search-bar-container.active {
+    width: calc(100vw - 160px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#searchInput {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    width: 0;
+    outline: none;
+    transition: width 0.3s ease;
+}
+
+.search-bar-container.active #searchInput {
+    width: 100%;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* --- Main Content --- */
+.main-content {
+    margin-top: calc(var(--header-height) + 10px);
+    padding: 10px;
+}
+
+.premium-card {
+    background: var(--surface-dark);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.player-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.glow-play-btn {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(74, 222, 128, 0.2);
+    border: 2px solid var(--accent-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-green);
+    font-size: 1.8rem;
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
+    transition: all 0.3s ease;
+}
+
+.player-container:hover .glow-play-btn {
+    transform: scale(1.1);
+    background: rgba(74, 222, 128, 0.4);
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.6);
+}
+
+.player-wrapper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* Hidden until click */
+}
+
+.player-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Video Details --- */
+.video-details {
+    padding: 14px;
+}
+
+.premium-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.video-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.share-action {
+    background: var(--accent-green);
+    color: #000;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-green);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: none;
+    z-index: 2000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}

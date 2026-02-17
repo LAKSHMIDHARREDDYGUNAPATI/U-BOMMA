@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>U-BOMMA | Premium Movie Streaming</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Premium Header -->
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo-text" onclick="window.location.reload()">U-BOMMA</h1>
+        </div>
+        <div class="header-actions">
+            <div class="search-bar-container" id="searchContainer">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button class="icon-btn" id="searchToggle"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Feed -->
+    <main class="main-content" id="video-feed">
+        <!-- Movie 1: Mercy (2026) -->
+        <article class="premium-card" data-title="Mercy 2026 HQ HDRip Telugu Tamil Hindi">
+            <div class="player-container" onclick="loadPlayer(this)">
+                <!-- Static Thumbnail Overlay -->
+                <div class="thumbnail-overlay">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200"
+                        alt="Mercy 2026" class="movie-poster">
+                    <div class="glow-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <!-- Hidden Player (Loaded on click) -->
+                <div class="player-wrapper"
+                    data-src='<iframe src="https://advertape.net/e/P80vYxb897sLWA/Mercy_%282026%29_HQ_HDRip_-_x264_-_%5BTel___Tam___Hin%5D_-_AAC_-_450MB_-_ESub.mkv.mp4" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>'>
+                </div>
+            </div>
+
+            <div class="video-details">
+                <h2 class="premium-title">Mercy (2026) HQ HDRip - x264 - [Tel _ Tam _ Hin] - AAC - 450MB</h2>
+                <div class="video-stats">
+                    <span class="stat-item"><i class="fas fa-eye"></i> <span class="view-count">0</span> Views</span>
+                    <button class="stat-item share-action" onclick="shareMovie('Mercy (2026)', this)">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie 2: Funky (2026) -->
+        <article class="premium-card" data-title="Funky 2026 Telugu DVDScr">
+            <div class="player-container" onclick="loadPlayer(this)">
+                <!-- Static Thumbnail Overlay -->
+                <div class="thumbnail-overlay">
+                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=1200"
+                        alt="Funky 2026" class="movie-poster">
+                    <div class="glow-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <!-- Hidden Player (Loaded on click) -->
+                <div class="player-wrapper"
+                    data-src='<iframe src="https://advertape.net/e/QWP6pWkO8Qt0lrl/Funky_%282026%29_720p_Telugu_DVDScr_-_x264_-_AAC_-_400MB.mkv.mp4" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>'>
+                </div>
+            </div>
+
+            <div class="video-details">
+                <h2 class="premium-title">Funky (2026) 720p Telugu DVDScr - x264 - AAC - 400MB</h2>
+                <div class="video-stats">
+                    <span class="stat-item"><i class="fas fa-eye"></i> <span class="view-count">0</span>
+                        Views</span>
+                    <button class="stat-item share-action" onclick="shareMovie('Funky (2026)', this)">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Notification for Share/Alerts -->
+    <div id="toast" class="toast">Link copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
