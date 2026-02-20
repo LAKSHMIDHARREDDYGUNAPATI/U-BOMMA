@@ -21,6 +21,17 @@ body {
     background-color: var(--bg-black);
     color: var(--text-main);
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+/* Rendering Optimizations */
+.movie-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 100px;
+    contain: layout style;
+    will-change: transform;
 }
 
 /* --- Header & Search Logic --- */
@@ -169,6 +180,13 @@ body {
     margin-bottom: 12px;
     color: var(--text-main);
     line-height: 1.4;
+}
+
+.serial-num {
+    color: var(--accent-green);
+    font-weight: 800;
+    margin-right: 4px;
+    opacity: 0.9;
 }
 
 .download-actions {
