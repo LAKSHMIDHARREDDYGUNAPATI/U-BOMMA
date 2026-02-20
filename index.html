@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>U-BOMMA | Premium Movie Streaming</title>
+    <title>U-BOMMA | Premium Movie Downloads</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -25,67 +25,266 @@
     </header>
 
     <!-- Main Feed -->
-    <main class="main-content" id="video-feed">
-        <!-- Movie 1: Mercy (2026) -->
-        <article class="premium-card" data-title="Mercy 2026 HQ HDRip Telugu Tamil Hindi">
-            <div class="player-container" onclick="loadPlayer(this)">
-                <!-- Static Thumbnail Overlay -->
-                <div class="thumbnail-overlay">
-                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200"
-                        alt="Mercy 2026" class="movie-poster">
-                    <div class="glow-play-btn">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <!-- Hidden Player (Loaded on click) -->
-                <div class="player-wrapper"
-                    data-src='<iframe src="https://advertape.net/e/P80vYxb897sLWA/Mercy_%282026%29_HQ_HDRip_-_x264_-_%5BTel___Tam___Hin%5D_-_AAC_-_450MB_-_ESub.mkv.mp4" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>'>
-                </div>
-            </div>
+    <main class="main-content" id="movie-feed">
+        <div class="notice-board">
+            <i class="fas fa-info-circle"></i>
+            <span>Select a movie to access direct download links.</span>
+        </div>
 
-            <div class="video-details">
-                <h2 class="premium-title">Mercy (2026) HQ HDRip - x264 - [Tel _ Tam _ Hin] - AAC - 450MB</h2>
-                <div class="video-stats">
-                    <span class="stat-item"><i class="fas fa-eye"></i> <span class="view-count">0</span> Views</span>
-                    <button class="stat-item share-action" onclick="shareMovie('Mercy (2026)', this)">
-                        <i class="fas fa-share"></i> Share
+        <!-- Movie: With Love -->
+        <article class="movie-card" data-title="With Love 2026 DVDScr Telugu Full Movie">
+            <div class="movie-info">
+                <h2 class="movie-name">With Love (2026) DVDScr Telugu Full Movie</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/boeanqj0xz9g" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('With Love (2026)')">
+                        <i class="fas fa-share-alt"></i>
                     </button>
                 </div>
             </div>
         </article>
 
-        <!-- Movie 2: Funky (2026) -->
-        <article class="premium-card" data-title="Funky 2026 Telugu DVDScr">
-            <div class="player-container" onclick="loadPlayer(this)">
-                <!-- Static Thumbnail Overlay -->
-                <div class="thumbnail-overlay">
-                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=1200"
-                        alt="Funky 2026" class="movie-poster">
-                    <div class="glow-play-btn">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <!-- Hidden Player (Loaded on click) -->
-                <div class="player-wrapper"
-                    data-src='<iframe src="https://advertape.net/e/QWP6pWkO8Qt0lrl/Funky_%282026%29_720p_Telugu_DVDScr_-_x264_-_AAC_-_400MB.mkv.mp4" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>'>
+        <!-- Movie: Sumathi Sathakam -->
+        <article class="movie-card" data-title="Sumathi Sathakam 2026 DVDScr Telugu Full Movie">
+            <div class="movie-info">
+                <h2 class="movie-name">Sumathi Sathakam (2026) DVDScr Telugu Full Movie</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/j2ui6en6c9qn" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Sumathi Sathakam (2026)')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
                 </div>
             </div>
+        </article>
 
-            <div class="video-details">
-                <h2 class="premium-title">Funky (2026) 720p Telugu DVDScr - x264 - AAC - 400MB</h2>
-                <div class="video-stats">
-                    <span class="stat-item"><i class="fas fa-eye"></i> <span class="view-count">0</span>
-                        Views</span>
-                    <button class="stat-item share-action" onclick="shareMovie('Funky (2026)', this)">
-                        <i class="fas fa-share"></i> Share
+        <!-- Movie: Mana Shankara Vara Prasad Garu -->
+        <article class="movie-card" data-title="Mana Shankara Vara Prasad Garu 2026 HDRip Telugu Full Movie">
+            <div class="movie-info">
+                <h2 class="movie-name">Mana Shankara Vara Prasad Garu (2026) HDRip Telugu Full Movie</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/js6wa1qtiot4" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Mana Shankara Vara Prasad Garu')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Anaganaga Oka Raju -->
+        <article class="movie-card" data-title="Anaganaga Oka Raju 2026 HDRip Telugu Full Movie">
+            <div class="movie-info">
+                <h2 class="movie-name">Anaganaga Oka Raju (2026) HDRip Telugu Full Movie</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/8jzxtj2zbpdx" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Anaganaga Oka Raju')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Kohrra Season 2 -->
+        <article class="movie-card" data-title="Kohrra Season 2 2026 HDRip Telugu">
+            <div class="movie-info">
+                <h2 class="movie-name">Kohrra Season 2 (2026) HDRip Telugu</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/ujt1to9uey5x" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Kohrra Season 2')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Thalaivar Thambi Thalaimaiyil -->
+        <article class="movie-card" data-title="Thalaivar Thambi Thalaimaiyil 2026 HDRip Telugu">
+            <div class="movie-info">
+                <h2 class="movie-name">Thalaivar Thambi Thalaimaiyil (2026) HDRip Telugu</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/jrddcncdi057" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Thalaivar Thambi Thalaimaiyil')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Vanaveera -->
+        <article class="movie-card" data-title="Vanaveera 2026 HDRip Telugu Full Movie">
+            <div class="movie-info">
+                <h2 class="movie-name">Vanaveera (2026) HDRip Telugu Full Movie</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/tlfy7yixssr3" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Vanaveera')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Bandwaale Season 1 -->
+        <article class="movie-card" data-title="Bandwaale Season 1 2026 HDRip Telugu Full Movie">
+            <div class="movie-info">
+                <h2 class="movie-name">Bandwaale Season 1 (2026) HDRip Telugu Full Movie</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/5ez5rslldd67" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Bandwaale Season 1')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Joe’s College Road Trip -->
+        <article class="movie-card" data-title="Tyler Perry’s Joe’s College Road Trip 2026 720p HD Tam Tel Hin Eng">
+            <div class="movie-info">
+                <h2 class="movie-name">Tyler Perry’s Joe’s College Road Trip (2026) [720p HD Multi Audio]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/wpubnnf61cbb" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Joe’s College Road Trip')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Love Me Love Me -->
+        <article class="movie-card" data-title="Love Me Love Me 2026 720p HD Tel Tam Hin Mal Kan">
+            <div class="movie-info">
+                <h2 class="movie-name">Love Me Love Me (2026) [720p HD Multi Audio]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/2wzj0br5ub16" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Love Me Love Me')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Amaravathiki Aahvanam -->
+        <article class="movie-card" data-title="Amaravathiki Aahvanam 2026 Telugu DVD 700MB">
+            <div class="movie-info">
+                <h2 class="movie-name">Amaravathiki Aahvanam (2026) Telugu DVD [700MB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/us7hw2ea17t1" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Amaravathiki Aahvanam')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Couple Friendly -->
+        <article class="movie-card" data-title="Couple Friendly 2026 Telugu DVDScr 700MB">
+            <div class="movie-info">
+                <h2 class="movie-name">Couple Friendly (2026) Telugu DVDScr [700MB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/1n4dnrqrh167" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Couple Friendly')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie: Mercy -->
+        <article class="movie-card" data-title="Mercy 2026 HDRip 720p Tel Tam Hin Mal Kan Eng 1.7GB">
+            <div class="movie-info">
+                <h2 class="movie-name">Mercy (2026) [720p HDRip Multi Audio 1.7GB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/j5681okmc31y" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Mercy (2026)')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card" data-title="Funky 2026 Telugu DVDScr 700MB">
+            <div class="movie-info">
+                <h2 class="movie-name">Funky (2026) Telugu DVDScr [700MB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/xmm8flkxbjy9" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Funky (2026)')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card" data-title="Lucky the Superstar 2026 Telugu HQ HDRip 700MB">
+            <div class="movie-info">
+                <h2 class="movie-name">Lucky the Superstar (2026) Telugu HQ HDRip [700MB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/xfjnje9hmex2" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Lucky the Superstar')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card" data-title="Chatha Pacha The Ring of Rowdies 2026 Telugu HD 700MB">
+            <div class="movie-info">
+                <h2 class="movie-name">Chatha Pacha: The Ring of Rowdies (2026) Telugu HD [700MB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/g80xw5oskpp2" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Chatha Pacha')">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card" data-title="Baby Girl 2025 Telugu HD 700MB">
+            <div class="movie-info">
+                <h2 class="movie-name">Baby Girl (2025) Telugu HD [700MB]</h2>
+                <div class="download-actions">
+                    <a href="https://droplaress.cc/ffj6lt9m8lqq" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Direct Download
+                    </a>
+                    <button class="share-mini" onclick="shareMovie('Baby Girl')">
+                        <i class="fas fa-share-alt"></i>
                     </button>
                 </div>
             </div>
         </article>
     </main>
 
-    <!-- Notification for Share/Alerts -->
-    <div id="toast" class="toast">Link copied to clipboard!</div>
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Link copied!</div>
 
     <script src="script.js"></script>
 </body>

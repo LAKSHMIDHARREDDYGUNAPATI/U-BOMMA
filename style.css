@@ -97,109 +97,92 @@ body {
     padding: 10px;
 }
 
-.premium-card {
+.notice-board {
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px dashed var(--accent-green);
+    color: var(--accent-green);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Movie Download Card --- */
+.movie-card {
     background: var(--surface-dark);
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
 }
 
-.player-container {
-    position: relative;
+.poster-preview {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #000;
-    cursor: pointer;
-    overflow: hidden;
+    background-color: #1a1a1a;
+    position: relative;
 }
 
-.thumbnail-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease;
-}
-
-.movie-poster {
+.poster-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
-.glow-play-btn {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background: rgba(74, 222, 128, 0.2);
-    border: 2px solid var(--accent-green);
-    border-radius: 50%;
+.movie-info {
+    padding: 16px;
+}
+
+.movie-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.download-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.download-btn {
+    flex: 1;
+    background: linear-gradient(180deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+    color: #000;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-green);
-    font-size: 1.8rem;
-    box-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
-    transition: all 0.3s ease;
+    gap: 8px;
+    transition: transform 0.2s;
 }
 
-.player-container:hover .glow-play-btn {
-    transform: scale(1.1);
-    background: rgba(74, 222, 128, 0.4);
-    box-shadow: 0 0 30px rgba(74, 222, 128, 0.6);
+.download-btn:active {
+    transform: scale(0.96);
 }
 
-.player-wrapper {
-    width: 100%;
-    height: 100%;
-    display: none;
-    /* Hidden until click */
-}
-
-.player-wrapper iframe {
-    width: 100%;
-    height: 100%;
+.share-mini {
+    width: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
     border: none;
-}
-
-/* --- Video Details --- */
-.video-details {
-    padding: 14px;
-}
-
-.premium-title {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.video-stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.stat-item {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.share-action {
-    background: var(--accent-green);
-    color: #000;
-    font-weight: 600;
-    padding: 6px 15px;
-    border-radius: 20px;
-    border: none;
 }
 
 /* Toast Notification */
