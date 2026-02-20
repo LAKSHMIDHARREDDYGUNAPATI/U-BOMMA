@@ -39,6 +39,30 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-download-btn {
+    background: linear-gradient(180deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+    color: #000;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s;
+}
+
+.app-download-btn:active {
+    transform: scale(0.95);
+}
+
 .logo-text {
     font-size: 1.5rem;
     font-weight: 800;
